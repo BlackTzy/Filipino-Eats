@@ -1,0 +1,662 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.header{
+    min-height: 100vh; 
+    width: 100%;  
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://th.bing.com/th/id/R.0d26ec96af1801c4235d35636c7b209c?rik=Egl%2biqKUTz0WMA&riu=http%3a%2f%2fhillskitchen.ca%2fimages%2fp-slide-3.jpg&ehk=g3KCs98FdulkfVaKyNTJMVljhGsvgZSPR96cLBUa6ds%3d&risl=&pid=ImgRaw&r=0);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1{
+    color: #fff;
+    font-size: 30px;
+    font-style: bold;
+}
+nav img{
+    width: 100px;
+}
+
+.navbar{
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul li{
+    margin-top: 5px;
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navbar ul li a{
+    color: white;
+    text-decoration:  none;
+    font-size: 15px;
+}
+
+.navbar ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f5655b;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+   width: 90%;
+   color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.text-box h1{
+    font-size: 52px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.visit-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.visit-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 0.5s;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+@media(max-width: 700px){
+    nav img{
+        width: 70px;
+    }
+    nav h1{
+        color: #fff;
+        font-size: 15px;
+        font-style: bold;
+    }
+
+    .text-box h1{
+        font-size: 22px;
+       
+    }
+    
+    .navbar ul li{
+        display: block;
+    }
+    .navbar {
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s; 
+    }
+
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+
+}
+
+/*recipes*/
+.recipes{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+p{
+    color: #5c5b5b;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+h3{
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    color: #131212;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+
+.row{
+    text-decoration: none;
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipes-col{
+    flex-basis: 31%;
+    background: #dfd5d5;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.recipes-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3) ;
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*History*/
+.FoodHistory{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.history-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.history-col img{
+    width: 100%;
+    display: block;
+}
+
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(236, 52, 113, 0.4);
+}
+
+.layer h3{
+    cursor: pointer;
+    text-shadow: #5c5b5b;
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/*Facilities*/
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+
+}
+
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;    
+}
+
+/*testimonials*/
+.testimonials{
+    width: 80%;
+    margin:auto;
+    padding-top:100px;
+    text-align: center;
+}
+
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testimonial-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3) ;
+}
+
+.testimonial-col p{
+    padding: 0;
+}
+
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.testimonial-col .fa{
+    color: #f44336;
+}
+
+@media(max-width:700){
+    .testimonial-col img{
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+}
+
+/*contact us*/
+.contact-us{
+    color: #fff;
+    margin: 100px auto;
+    width: 70%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://ak.picdn.net/shutterstock/videos/22362667/thumb/4.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    height: 120px;
+}
+
+.contact-us h1{
+    font-size: 30px;
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+/*footer*/
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600px;
+}
+
+.icon .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0 ;
+}
+
+.fa-heart-o{
+    color: #f44336;
+}
+
+
+/*about-us subpage*/
+
+.about-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/b6/64/93/b66493a2ed4cbdf3029cb483f4d18d9a.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    text-shadow: #131212;
+    color: #fff;
+}
+
+.about-header h3{
+    margin-top: 20px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img{
+    width: 100%;
+}
+
+.about-col h1{
+    padding-top: 0;
+}
+
+.about-col p{
+    padding: 15px 0 25px;
+}
+
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+
+.red-btn:hover{
+    color: #fff;
+}
+
+/*recipe subpage*/
+.recipe-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://i2.wp.com/langyaw.com/wp-content/uploads/2015/01/sugbusog-2015-16.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    text-shadow: #131212;
+    color: #fff;
+}
+
+.recipe-header h3{
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 40px;
+    color: #fff;
+}
+
+/*blog content*/
+
+/*blog content*/
+.blog-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://duyt4h9nfnj50.cloudfront.net/resized/f15b340a881d02afb419cf831513e49f-w2880-36.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    text-shadow: #131212;
+    color: #fff;
+}
+
+span a{
+    color: black;
+    text-decoration: none;
+}
+.blog-header h3{
+    text-decoration: none;
+    margin-top: 0;
+    font-size: 40px;
+    color: #fff;
+}
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    padding-right: 90px;
+}
+
+.blog-left{ 
+    flex-basis: 65%;
+}
+
+.blog-left img{
+    width: 550px;
+    height: 400px;
+    border-radius: 45px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.blog-left  h4{
+    color: #222;
+    font-weight: 600;
+    font-size: 35px;
+    margin: 0;
+}
+
+.blog-left p{
+    color: #474646;
+    padding: 0;
+    width: 535px;
+    text-align: justify;
+}
+
+.blog-right {
+    flex-basis: 32%;
+    text-align: right;
+}
+
+.blog-right h5{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+span{
+    font-size: 15px;
+}
+
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+
+.comment-box h3{
+    text-align: left;
+}
+
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+
+.comment-form button{
+    margin: 10px 0;
+}
+
+@media(max-width:700px){
+    .blog-header h3{
+        font-size: 40px;
+        width: fit-content;
+        align-items: center;
+    }
+    
+    .blog-left h4{
+        font-size: 30px;
+        width: 300px;
+    }
+    .blog-left p{
+        font-size:12px;
+        width: fit-content;
+    }
+
+    .blog-left img{
+        width: 100%;
+        height: 200px;
+    }
+
+    .comment-box h3{
+        text-align: left;
+        font-size: 25px;
+    }
+
+}
+
+/*contact*/
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
+
+.contact-header{
+        height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://ak.picdn.net/shutterstock/videos/22362667/thumb/4.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        text-shadow: #131212;
+        color: #fff;
+    
+}
+
+.contact-header h3{
+    font-size: 50px;
+    font-weight: 600px;
+}
+
+.contact{
+    width: 80%;
+    margin: auto;
+}
+
+.contact-col{
+    flex-basis: 48;
+    margin-bottom: 30px;
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fa{
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div p{
+    padding: 0;
+}
+
+.contact-col div h5{
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-left: 100px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.contact-col button{
+    margin-left: 100px;
+}

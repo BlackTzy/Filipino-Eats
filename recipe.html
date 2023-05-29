@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale = 1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipino Eats</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+     rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    </head>
+<body>
+    <section class="recipe-header">
+         <nav>
+            <a href ="index.html"><img src="logo.png"></a>
+            <h1>Filipino Eats</h1>
+            <div class="navbar" id="navBar">
+                <i class="fa fa-window-close-o" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="recipe.html">OFFERED RECIPES</a></li>
+                    <li><a href="blog.html">RECIPE BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Filipino-Inspired Cooking</h1>
+    </section>
+
+<!----recipe content-->
+<section class="recipes">
+    <h1>Recipes We Offer</h1>
+    <p>We incorporate fresh recipes from our 
+        kitchen and bloggers in our culinary articles.</p>
+
+    <div class="row">
+        <div class="recipes-col" >
+            <a href="blog_dish.html"><h3>Filipino Dishes</h3></a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Nobis consequatur nisi aliquam hic vitae consequuntur vero animi cum quae</p>  
+        </div>
+
+        <div class="recipes-col">
+            <a href="blog_desserts.html"><h3>Filipino Kakanin</h3></a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Nobis consequatur nisi aliquam hic vitae consequuntur vero animi cum quae</p>  
+
+        </div>
+
+        <div class="recipes-col">
+            <a href="blog_popular_miryeda.html"><h3>Filipino Popular Miryenda</h3></a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Nobis consequatur nisi aliquam hic vitae consequuntur vero animi cum quae</p>  
+
+        </div>
+
+    </div>
+</section>
+<!--Facilities-->
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p>Nobis consequatur nisi aliquam hic vitae consequuntur vero animi cum quae</p>  
+        </p>
+    
+        <div class="row">
+            <div class="facilities-col">
+                <img src="https://1.bp.blogspot.com/-URVhdvb4lzY/VTP6P_UQMFI/AAAAAAAALKs/m0qNnzPBJgI/s1600/balut%2BPateros%2B-%2BGuiness%2Blargest%2Bserving%2Bof%2Bbalut(12).JPG">
+                    <h3>Pateros Largest Balut Serving</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Nobis consequatur nisi aliquam hic vitae consequuntur vero animi cum quae</p>  
+            </div>
+    
+            <div class="facilities-col">
+                <img src="https://th.bing.com/th/id/R.409ed24eac96f69b20c994b36e64676c?rik=34PA5IXfWLYx%2fg&riu=http%3a%2f%2fi.dailymail.co.uk%2fi%2fpix%2f2009%2f12%2f14%2farticle-0-07987DEF000005DC-623_964x664.jpg&ehk=aKy4e82rxgZPUZUr1g%2bj3LRhBvJEYGINJLuK%2f9pbcWY%3d&risl=&pid=ImgRaw&r=0">
+                    <h3>Filipino Chefs 5000 Cheese Dishes</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Nobis consequatur nisi aliquam hic vitae consequuntur vero animi cum quae</p>  
+            </div>
+    
+            
+            <div class="facilities-col">
+                <img src="https://post.greatist.com/wp-content/uploads/sites/2/2020/02/GRT-filipino-food-dishes-732x549-thumb-732x549.jpg">
+                    <h3>Tasty and Healthy Food</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Nobis consequatur nisi aliquam hic vitae consequuntur vero animi cum quae</p>  
+            </div>
+    
+    
+    </section>
+
+
+<!--FOOTER ABOUT US-->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Corporis commodi vel aut voluptate</p>
+
+        <div class="icon">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+
+            <p>Made with <i class="fa fa-heart-o"></i></p>
+</section>
+
+
+<!----JavaScript for Menu---->
+<script>
+
+    var navBar = document.getElementById("navBar")
+
+    function showMenu(){
+        navBar.style.right = "0";
+    }
+
+    function hideMenu(){
+        navBar.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
